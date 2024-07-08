@@ -3,31 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Resume and Portfolio</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
+        <h1>Home page</h1>
+    </header>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="work_experience.html">Work Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
-        <header>
-            <a href="Home.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
-            <h1>Online Resume and Portfolio</h1>
-        </header>
         <main>
-            <section class="home">
-                <img class="main-image" src="images/home.jpg" alt="Profile Image">
+            <section class="intro-section">
                 <h2>Welcome to My Portfolio</h2>
-                <p>Summary of career goals or achievements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
-                <nav>
-                    <a href="aboutme.html">About Me</a>
-                    <a href="work_experience.html">Work Experience</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+                <p>Hi, I'm [Your Name]. I'm a [Your Profession], and this is my personal portfolio website. Here you can learn more about me, my work experience, projects, and how to contact me. Feel free to explore and get in touch!</p>
+            </section>
+            <section class="features">
+                <div class="feature">
+                    <img src="images/work.jpg" alt="Work Experience">
+                    <h3>Work Experience</h3>
+                    <p>Discover my professional background and the roles I've held throughout my career.</p>
+                    <a href="work_experience.html" class="button">Learn More</a>
+                </div>
+                <div class="feature">
+                    <img src="images/project1.jpg" alt="Projects">
+                    <h3>Projects</h3>
+                    <p>Take a look at some of the projects I've worked on, showcasing my skills and expertise.</p>
+                    <a href="projects.html" class="button">View Projects</a>
+                </div>
+                <div class="feature">
+                    <img src="images/home.jpg" alt="Contact">
+                    <h3>Contact</h3>
+                    <p>Get in touch with me for any professional inquiries or collaborations.</p>
+                    <a href="contact.html" class="button">Contact Me</a>
+                </div>
             </section>
         </main>
         <footer>
             <p>&copy; 2024 Your Name. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('showing');
+        }
+    </script>
 </body>
 </html>

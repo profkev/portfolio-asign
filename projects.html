@@ -7,21 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
+        <h1>Projects</h1>
+    </header>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="work_experience.html">Work Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
-        <header>
-            <a href="index.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
-            <h1>Projects</h1>
-        </header>
         <main>
             <section class="projects">
-                <img class="main-image" src="images/wave.jpg" alt="Projects Image">
-                <h2>My Projects</h2>
-                <p>Portfolio with the title, brief description, applied technologies, roles, and illustrations of my projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                <div class="project">
+                    <img src="images/project1.jpg" alt="Project 1 Image">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                </div>
+                <div class="project">
+                    <img src="images/project2.jpg" alt="Project 2 Image">
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                </div>
+                <div class="project">
+                    <img src="images/project3.jpg" alt="Project 3 Image">
+                    <h3>Project Title 3</h3>
+                    <p>Brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                </div>
             </section>
         </main>
         <footer>
             <p>&copy; 2024 Your Name. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('showing');
+        }
+    </script>
 </body>
 </html>

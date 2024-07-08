@@ -7,28 +7,125 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
     background-color: #deae9f;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 header .logo {
     max-width: 100px;
-    border-radius: 50%;
+    border-radius: 40%;
+    margin-right: auto;
 }
 
 h1 {
-    color: #0a2d2e; /* Ensure the heading color contrasts with the background */
+    color: #0a2d2e;
     margin: 10px 0;
+}
+
+nav {
+    background-color: #879693;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #879693;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px; /* Reduced font size */
+}
+
+nav a:hover {
+    background-color: #0a2d2e;
+}
+
+nav .menu-toggle {
+    display: none;
+    background-color: #879693;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+}
+
+nav .menu-toggle:hover {
+    background-color: #0a2d2e;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul.showing {
+        display: flex;
+    }
 }
 
 main {
@@ -41,7 +138,7 @@ main {
     border: 1px solid #deae9f;
     border-radius: 8px;
     padding: 20px;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -49,20 +146,7 @@ main {
 h2 {
     color: #deae9f;
     margin-bottom: 20px;
-}
-
-nav a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #879693;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #0a2d2e;
+    font-size: 2em; /* Reduced font size */
 }
 
 form {
@@ -100,12 +184,166 @@ footer {
     padding: 10px;
     text-align: center;
     color: #ffffff;
-    margin-top: 20px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .main-image {
     width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+/* Specific styles for About Me page */
+.about {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #d24d57;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.about .profile-image {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.about .profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 5px solid #ffffff; /* Stylish border */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Classy shadow */
+}
+
+.about .profile-info {
+    flex: 2;
+    padding-left: 40px;
+    color: #ffffff;
+}
+
+.about .profile-info h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.about .profile-info p {
+    line-height: 1.6;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.about .social-icons {
+    margin-top: 20px;
+}
+
+.about .social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+.about .social-icons a:hover {
+    color: #0a2d2e;
+}
+
+/* Specific styles for Work Experience and Projects page */
+.work-experience, .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.work-experience .job, .projects .project {
+    background-color: #f7ebe7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience .job h3, .projects .project h3 {
+    margin-top: 0;
+}
+
+.projects .project img {
+    width: 100%;
+    height: 200px; /* Ensures all images have the same height */
+    object-fit: cover; /* Ensures images are properly contained within the height */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Specific styles for Index page */
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-section h2 {
+    color: #d24d57;
+    font-size: 2em; /* Reduced font size */
+}
+
+.intro-section p {
+    font-size: 1em; /* Reduced font size */
+    color: #0a2d2e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    background-color: #f7ebe7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    color: #d24d57;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Reduced font size */
+}
+
+.feature p {
+    color: #0a2d2e;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .work-experience, .projects {
+        grid-template-columns: 1fr; /* Stacks the items vertically on small screens */
+    }
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .profile-info {
+        padding-left: 0;
+        padding-top: 20px;
+    }
 }

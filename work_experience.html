@@ -7,21 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
+        <h1>Work Experience</h1>
+    </header>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="work_experience.html">Work Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
-        <header>
-            <a href="index.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
-            <h1>Work Experience</h1>
-        </header>
         <main>
-            <section class="work">
-                <img class="main-image" src="images/work.jpg" alt="Work Experience Image">
-                <h2>My Work History</h2>
-                <p>Details about my work history, including the duration and the companies I have worked for. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <section class="work-experience">
+                <div class="job">
+                    <h3>Job Title 1</h3>
+                    <p>Company 1</p>
+                    <p>Duration: January 2020 - Present</p>
+                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="job">
+                    <h3>Job Title 2</h3>
+                    <p>Company 2</p>
+                    <p>Duration: June 2018 - December 2019</p>
+                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="job">
+                    <h3>Job Title 3</h3>
+                    <p>Company 3</p>
+                    <p>Duration: March 2015 - May 2018</p>
+                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
             </section>
         </main>
         <footer>
             <p>&copy; 2024 Your Name. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('showing');
+        }
+    </script>
 </body>
 </html>
