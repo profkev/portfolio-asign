@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7ebe7;
+    color: #0a2d2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background-color: #deae9f;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+h1 {
+    color: #0a2d2e; /* Ensure the heading color contrasts with the background */
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.home, .about, .work, .projects, .contact {
+    background-color: #ffffff;
+    border: 1px solid #deae9f;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #deae9f;
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #879693;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #0a2d2e;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #879693;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #deae9f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #879693;
+}
+
+footer {
+    background-color: #deae9f;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
